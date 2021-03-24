@@ -26,7 +26,7 @@ class First extends StatelessWidget {
                 child: Text('Arguments')),
             ElevatedButton(
                 onPressed: () {
-                  Get.toNamed("/urluid/23883");
+                  Get.toNamed("/urluid?uid=23883");
                 },
                 child: Text('Url go uid')),
           ],

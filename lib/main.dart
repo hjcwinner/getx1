@@ -21,7 +21,7 @@ class MyApp extends StatelessWidget {
       getPages: [
         GetPage(name: "/reactstate", page: () => ReactState(), transition: Transition.zoom),
         GetPage(name: "/binding", page: () => BindingPage(), transition: Transition.zoom),
-        GetPage(name: "/urluid/:uid", page: () => UrlUid(), transition: Transition.zoom)
+        GetPage(name: "/urluid?uid", page: () => UrlUid(), transition: Transition.zoom)
       ],
     );
   }

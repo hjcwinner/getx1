@@ -1,4 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:getx1/controller/count_controller_provider.dart';
+import 'package:getx1/statepage/getx.dart';
+import 'package:getx1/statepage/provider.dart';
+import 'package:provider/provider.dart';
 
 class GetxState extends StatelessWidget {
   @override
@@ -9,10 +14,13 @@ class GetxState extends StatelessWidget {
       ),
       body: Center(
         child: Column(
-           mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Text('state', style: TextStyle(fontSize: 35),),
-            ElevatedButton(onPressed: () {}, child: Text('Button')),
+           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          children: [  
+            Getxstate(),
+            SizedBox(height: 25),
+            ChangeNotifierProvider<CountControllerProvider>(
+              create: (_) => CountControllerProvider(), child: ProviderState(),
+            )
           ],
         ),
       ),
